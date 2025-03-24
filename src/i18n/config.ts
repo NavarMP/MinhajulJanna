@@ -15,7 +15,7 @@ export type Messages = {
   developedBy: string;
   copyright: string;
   locations: {
-    head: string[];
+    head: string;
     title: string;
     branches: string[];
   };
@@ -45,7 +45,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 Minhajul Janna. All rights reserved.',
     search: 'Search',
     locations: {
-      head: ['Koyilandy','Narikkuni','Poonoor'],
+      head: 'Koyilandy',
       title: 'Locations',
       branches: ['Narikkuni', 'Poonoor']
     },
@@ -79,7 +79,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 മിൻഹാജുൽ ജന്ന. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തമാണ്.',
     search: 'തിരയുക',
     locations: {
-      head: ['കോയിലാണ്ടി', 'നരിക്കുനി', 'പൂനൂർ'],
+      head: 'കോയിലാണ്ടി',
       title: 'സ്ഥലങ്ങൾ',
       branches: ['നരിക്കുനി', 'പൂനൂർ']
     },
@@ -113,7 +113,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 منهاج الجنة. جميع الحقوق محفوظة.',
     search: 'بحث',
     locations: {
-      head: ['كويلاندي ', 'ناريكوني', 'بونور'],
+      head: 'كويلاندي ',
       title: 'المواقع',
       branches: ['ناريكوني', 'بونور']
     },
