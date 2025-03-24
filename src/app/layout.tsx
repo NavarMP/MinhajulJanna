@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
-import { Poppins, Amiri, Noto_Sans_Malayalam } from 'next/font/google';
+import { Poppins, Amiri, Noto_Serif_Malayalam } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -18,7 +18,7 @@ const amiri = Amiri({
   variable: '--font-arabic'
 });
 
-const malayalam = Noto_Sans_Malayalam({
+const malayalam = Noto_Serif_Malayalam({
   subsets: ['malayalam'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-malayalam'

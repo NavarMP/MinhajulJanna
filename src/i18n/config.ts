@@ -15,7 +15,7 @@ export type Messages = {
   developedBy: string;
   copyright: string;
   locations: {
-    head: string;
+    head: string[];
     title: string;
     branches: string[];
   };
@@ -45,7 +45,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 Minhajul Janna. All rights reserved.',
     search: 'Search',
     locations: {
-      head: 'Koyilandy (Head)',
+      head: 'Koyilandy',
       title: 'Locations',
       branches: ['Narikkuni', 'Poonoor']
     },
