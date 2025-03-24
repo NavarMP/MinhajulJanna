@@ -19,17 +19,17 @@ import Link from 'next/link';
 const locationImages = [
   {
     id: 'koyilandy',
-    src: 'https://images.unsplash.com/photo-1582540730843-f5dbb75ba71f',
+    src: 'images/koyilandy.jpg/',
     alt: 'Koyilandy Center',
   },
   {
     id: 'narikkuni',
-    src: 'https://images.unsplash.com/photo-1599785209707-a456fc1337bb',
+    src: 'images/narikkuni.jpg/',
     alt: 'Narikkuni Center',
   },
   {
     id: 'poonoor',
-    src: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+    src: 'images/poonoor.jpg/',
     alt: 'Poonoor Center',
   },
 ];
