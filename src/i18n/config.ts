@@ -45,7 +45,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 Minhajul Janna. All rights reserved.',
     search: 'Search',
     locations: {
-      head: 'Koyilandy',
+      head: ['Koyilandy','Narikkuni','Poonoor'],
       title: 'Locations',
       branches: ['Narikkuni', 'Poonoor']
     },
@@ -79,7 +79,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 മിൻഹാജുൽ ജന്ന. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തമാണ്.',
     search: 'തിരയുക',
     locations: {
-      head: 'കോയിലാണ്ടി (ഹെഡ്)',
+      head: ['കോയിലാണ്ടി', 'നരിക്കുനി', 'പൂനൂർ'],
       title: 'സ്ഥലങ്ങൾ',
       branches: ['നരിക്കുനി', 'പൂനൂർ']
     },
@@ -113,7 +113,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 منهاج الجنة. جميع الحقوق محفوظة.',
     search: 'بحث',
     locations: {
-      head: 'كويلاندي (المقر الرئيسي)',
+      head: ['كويلاندي ', 'ناريكوني', 'بونور'],
       title: 'المواقع',
       branches: ['ناريكوني', 'بونور']
     },
