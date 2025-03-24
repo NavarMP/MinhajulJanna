@@ -11,7 +11,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { ModeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
-import { Languages } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe as Globe } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SearchDialog } from '@/components/ui/search-dialog';
@@ -83,7 +84,7 @@ export function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Languages className="h-5 w-5" />
+                <FontAwesomeIcon icon={Globe} className="h-5 w-5" />
                 <span className="sr-only">Language</span>
               </Button>
             </DropdownMenuTrigger>

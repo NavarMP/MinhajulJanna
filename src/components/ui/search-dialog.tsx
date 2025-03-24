@@ -10,7 +10,9 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch as Search} from "@fortawesome/free-solid-svg-icons";
+
 import { useI18n } from '@/i18n/i18n-provider';
 import { cn } from '@/lib/utils';
 
@@ -31,7 +33,7 @@ export function SearchDialog() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button variant="ghost" size="icon" className="ml-auto">
-          <Search className="h-5 w-5" />
+          <FontAwesomeIcon icon={Search} className="h-5 w-5" />
           <span className="sr-only">{t('search')}</span>
         </Button>
       </DialogTrigger>

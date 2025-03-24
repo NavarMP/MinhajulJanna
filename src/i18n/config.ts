@@ -45,7 +45,7 @@ export const messages: Record<Locale, Messages> = {
     copyright: '© 2025 Minhajul Janna. All rights reserved.',
     search: 'Search',
     locations: {
-      head: 'Koyilandy',
+      head: 'Naduvannur',
       title: 'Locations',
       branches: ['Narikkuni', 'Poonoor']
     },

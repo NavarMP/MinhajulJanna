@@ -4,14 +4,15 @@ import { cn } from '@/lib/utils';
 import { useI18n } from '@/i18n/i18n-provider';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Home, FileText, Video, BookOpen, UserPlus } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome as Home, faFileAlt as File, faVideo as Video, faBook as Book, faUserPlus as UserPlus} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 const navItems = [
   { key: 'home', Icon: Home, path: '/' },
-  { key: 'posts', Icon: FileText, path: '/posts' },
+  { key: 'posts', Icon: File, path: '/posts' },
   { key: 'videos', Icon: Video, path: '/videos' },
-  { key: 'articles', Icon: BookOpen, path: '/articles' },
+  { key: 'articles', Icon: Book, path: '/articles' },
   { key: 'admission', Icon: UserPlus, path: '/admission' },
 ];
 
@@ -60,7 +61,7 @@ export function BottomNav() {
                     : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                 )}
               >
-                <Icon className="w-5 h-5" />
+                <FontAwesomeIcon icon={Icon} className="w-5 h-5" />
                 <span className="text-xs font-medium">{t(key)}</span>
               </Link>
             );

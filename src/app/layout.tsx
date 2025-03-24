@@ -4,21 +4,21 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
-import { Poppins, Amiri, Noto_Serif_Malayalam } from 'next/font/google';
+import { Poppins, Noto_Sans_Arabic, Noto_Serif_Malayalam } from 'next/font/google';
 
-const poppins = Poppins({
+const enFont = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans'
 });
 
-const amiri = Amiri({
+const arFont = Noto_Sans_Arabic({
   subsets: ['arabic'],
   weight: ['400', '700'],
   variable: '--font-arabic'
 });
 
-const malayalam = Noto_Serif_Malayalam({
+const mlFont = Noto_Serif_Malayalam({
   subsets: ['malayalam'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-malayalam'
@@ -45,9 +45,9 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
-          poppins.variable,
-          amiri.variable,
-          malayalam.variable
+          enFont.variable,
+          arFont.variable,
+          mlFont.variable
         )}
       >
         <ThemeProvider>

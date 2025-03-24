@@ -2,24 +2,25 @@
 
 import { useI18n } from '@/i18n/i18n-provider';
 import { cn } from '@/lib/utils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  BookOpen,
-  Lightbulb,
-  Heart,
-  BookmarkCheck,
-  Laptop,
-  Languages
-} from 'lucide-react';
+  faBook as Book,          // Replaces BookOpen
+  faHeart as Heart,         // Replaces Heart
+  faLightbulb as Bulb,     // Replaces Lightbulb
+  faBookmark as Bookmark,      // Replaces BookmarkCheck
+  faLaptop as Laptop,        // Replaces Laptop
+  faGlobe as Globe          // Replaces Languages
+} from '@fortawesome/free-solid-svg-icons';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { messages } from '@/i18n/config';
 
 const featureIcons = [
-  BookOpen,
+  Book,
   Heart,
-  Lightbulb,
-  BookmarkCheck,
+  Bulb,
+  Bookmark,
   Laptop,
-  Languages
+  Globe
 ];
 
 export function Features() {
@@ -54,7 +55,7 @@ export function Features() {
               <Card key={index} className="transition-all hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary" />
+                    <FontAwesomeIcon icon={Icon} className="h-5 w-5 text-primary" />
                   </div>
                   <CardTitle className={cn(
                     "text-lg",

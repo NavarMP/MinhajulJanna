@@ -3,14 +3,9 @@
 import { useI18n } from '@/i18n/i18n-provider';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Instagram,
-  Youtube,
-  Send
-} from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapPin as Pin, faPhone as Phone, faEnvelope as Mail} from '@fortawesome/free-solid-svg-icons'; // Solid icons
+import { faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Brand icons
 import Link from 'next/link';
 
 // Contact information
@@ -18,14 +13,14 @@ const contactInfo = {
   phones: ['+91 907 235 8001', '+91 907 235 8002'],
   email: 'minhajuljanna786@gmail.com',
   locations: [
-    'Koyilandy',
+    'Naduvannur',
     'Narikkuni',
     'Poonoor'
   ],
   social: [
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/minhajul_janna_/' },
-    { name: 'Youtube', icon: Youtube, url: 'https://youtube.com/@minhajuljanna' },
-    { name: 'WhatsApp', icon: Send, url: 'https://wa.me/919072358001' }
+    { name: 'Instagram', icon: faInstagram, url: 'https://instagram.com/minhajul_janna_/' },
+    { name: 'Youtube', icon: faYoutube, url: 'https://youtube.com/@minhajuljanna' },
+    { name: 'WhatsApp', icon: faWhatsapp, url: 'https://whatsapp.com/channel/0029VaxowK2DzgTE7cdK4G11' }
   ]
 };
 
@@ -51,7 +46,7 @@ export function ContactSection() {
             <div className="mt-6 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  <FontAwesomeIcon icon={Pin} className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">
@@ -71,7 +66,7 @@ export function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Phone className="h-5 w-5 text-primary" />
+                  <FontAwesomeIcon icon={Phone} className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">
@@ -91,7 +86,7 @@ export function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Mail className="h-5 w-5 text-primary" />
+                  <FontAwesomeIcon icon={Mail} className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">
@@ -119,7 +114,7 @@ export function ContactSection() {
                   asChild
                 >
                   <Link href={platform.url} target="_blank" rel="noopener noreferrer">
-                    <platform.icon className="h-4 w-4" />
+                    <FontAwesomeIcon icon={platform.icon} className="h-4 w-4" />
                     {platform.name}
                   </Link>
                 </Button>

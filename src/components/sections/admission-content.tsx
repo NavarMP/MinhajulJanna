@@ -4,7 +4,8 @@ import { useI18n } from '@/i18n/i18n-provider';
 import { Features } from '@/components/sections/features';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Phone, Mail, Calendar, Download } from 'lucide-react';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCalendarAlt as Calendar, faPhone as Phone, faDownload as Download } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
@@ -46,7 +47,7 @@ export function AdmissionContent() {
                 "flex items-center",
                 isMalayalam && "font-malayalam"
               )}>
-                <Calendar className="h-5 w-5 mr-2 text-primary" />
+                <FontAwesomeIcon icon={Calendar} className="h-5 w-5 mr-2 text-primary" />
                 {isMalayalam ? 'പ്രവേശന കാലയളവ്' : locale === 'ar' ? 'فترة القبول' : 'Admission Period'}
               </CardTitle>
             </CardHeader>
@@ -101,7 +102,7 @@ export function AdmissionContent() {
                 "flex items-center",
                 isMalayalam && "font-malayalam"
               )}>
-                <Phone className="h-5 w-5 mr-2 text-primary" />
+                <FontAwesomeIcon icon={Phone} className="h-5 w-5 mr-2 text-primary" />
                 {isMalayalam ? 'ബന്ധപ്പെടുക' : locale === 'ar' ? 'اتصل بنا' : 'Contact Us'}
               </CardTitle>
             </CardHeader>

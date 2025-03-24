@@ -1,7 +1,6 @@
 'use client';
 
 import { useI18n } from '@/i18n/i18n-provider';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import {
@@ -12,25 +11,27 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight as ArrowRight, faArrowLeft as ArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Autoplay from 'embla-carousel-autoplay';
 import Link from 'next/link';
 
 // Placeholder images (replace these with actual images later)
 const locationImages = [
   {
-    id: 'koyilandy',
-    src: 'images/koyilandy.jpg/',
-    alt: 'Koyilandy Center',
+    id: 'Naduvannur',
+    src: 'images/Naduvannur.jpg/',
+    alt: 'Naduvannur',
   },
   {
     id: 'narikkuni',
     src: 'images/narikkuni.jpg/',
-    alt: 'Narikkuni Center',
+    alt: 'Narikkuni',
   },
   {
     id: 'poonoor',
     src: 'images/poonoor.jpg/',
-    alt: 'Poonoor Center',
+    alt: 'Poonoor',
   },
 ];
 
@@ -86,7 +87,7 @@ export function Hero() {
                   <span className={cn(isMalayalam && "font-malayalam")}>
                     {t('admission')}
                   </span>
-                  <ArrowRight className={cn(
+                  <FontAwesomeIcon icon={ArrowRight} className={cn(
                     "ml-2 h-4 w-4 transition-transform group-hover:translate-x-1",
                     isRTL && "rotate-180 mr-2 ml-0 group-hover:-translate-x-1"
                   )} />
@@ -96,7 +97,11 @@ export function Hero() {
           </div>
 
           <div className="mx-auto w-full max-w-lg">
-            <Carousel className="w-full">
+            <Carousel
+              className="w-full"
+              opts={{ loop: true }}
+              plugins={[Autoplay({ delay: 3000 })]} // Auto-scroll every 3 seconds
+            >
               <CarouselContent>
                 {locationImages.map((img, index) => (
                   <CarouselItem key={img.id}>
@@ -115,9 +120,7 @@ export function Hero() {
                             "text-lg font-medium",
                             isMalayalam && "font-malayalam"
                           )}>
-                            {index === 0
-                              ? t('locations.head')
-                              : t('locations.branches').at(index - 1)}
+                            {img.alt}
                           </h3>
                         </div>
                       </div>
