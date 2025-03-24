@@ -59,13 +59,13 @@ export function AdmissionContent() {
                   ? 'പ്രവേശനം മെയ് മുതൽ ജൂൺ വരെ വാർഷികമായി തുറന്നിരിക്കുന്നു. അടുത്ത അക്കാഡമിക് വർഷത്തിലേക്കുള്ള അപേക്ഷകൾ 2025 മെയ് 1 ന് ആരംഭിക്കും.'
                   : locale === 'ar'
                   ? 'يتم فتح القبول سنويًا من مايو إلى يونيو. ستبدأ طلبات العام الدراسي القادم في 1 مايو 2025.'
-                  : 'Admissions are open annually from May to June. Applications for the next academic year will open on May 1, 2025.'
+                  : 'Admissions are open annually from Ramadan to _.'
                 }
               </p>
             </CardContent>
           </Card>
 
-          <Card>
+          {/* <Card>
             <CardHeader>
               <CardTitle className={cn(
                 "flex items-center",
@@ -93,7 +93,7 @@ export function AdmissionContent() {
                 </span>
               </Button>
             </CardContent>
-          </Card>
+          </Card> */}
 
           <Card>
             <CardHeader>

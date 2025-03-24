@@ -18,13 +18,13 @@ const contactInfo = {
   phones: ['+91 907 235 8001', '+91 907 235 8002'],
   email: 'minhajuljanna786@gmail.com',
   locations: [
-    'Koyilandy (Head)',
+    'Koyilandy',
     'Narikkuni',
     'Poonoor'
   ],
   social: [
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/' },
-    { name: 'Youtube', icon: Youtube, url: 'https://youtube.com/' },
+    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/minhajul_janna_/' },
+    { name: 'Youtube', icon: Youtube, url: 'https://youtube.com/@minhajuljanna' },
     { name: 'WhatsApp', icon: Send, url: 'https://wa.me/919072358001' }
   ]
 };
