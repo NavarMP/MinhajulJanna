@@ -16,7 +16,6 @@ import { faArrowRight as ArrowRight, faArrowLeft as ArrowLeft } from '@fortaweso
 import Autoplay from 'embla-carousel-autoplay';
 import Link from 'next/link';
 
-// Placeholder images (replace these with actual images later)
 const locationImages = [
   {
     id: 'Naduvannur',

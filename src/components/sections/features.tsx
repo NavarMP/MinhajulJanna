@@ -4,12 +4,12 @@ import { useI18n } from '@/i18n/i18n-provider';
 import { cn } from '@/lib/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faBook as Book,          // Replaces BookOpen
-  faHeart as Heart,         // Replaces Heart
-  faLightbulb as Bulb,     // Replaces Lightbulb
-  faBookmark as Bookmark,      // Replaces BookmarkCheck
-  faLaptop as Laptop,        // Replaces Laptop
-  faGlobe as Globe          // Replaces Languages
+  faBook as Book,
+  faHeart as Heart,
+  faLightbulb as Bulb,
+  faBookmark as Bookmark,
+  faLaptop as Laptop,
+  faGlobe as Globe
 } from '@fortawesome/free-solid-svg-icons';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { messages } from '@/i18n/config';
@@ -37,13 +37,13 @@ export function Features() {
             "text-3xl font-bold tracking-tight sm:text-4xl",
             isMalayalam && "font-malayalam"
           )}>
-            {t('admission')}
+            {t('Features')}
           </h2>
           <p className={cn(
             "mt-4 text-lg text-muted-foreground",
             isMalayalam && "font-malayalam"
           )}>
-            {locale === 'ml' ? 'പ്രത്യേകതകൾ' : locale === 'en' ? 'Features' : 'المميزات'}
+            {/* {locale === 'ml' ? 'പ്രത്യേകതകൾ' : locale === 'en' ? 'Features' : 'المميزات'} */}
           </p>
         </div>
 

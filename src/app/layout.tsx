@@ -5,6 +5,7 @@ import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 import { Poppins, Noto_Sans_Arabic, Noto_Serif_Malayalam } from 'next/font/google';
+import {Footer} from '@/components/sections/footer';
 
 const enFont = Poppins({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default function RootLayout({
               {children}
               <Toaster position="top-center" />
             </main>
+            <Footer/>
           </I18nProvider>
         </ThemeProvider>
       </body>
