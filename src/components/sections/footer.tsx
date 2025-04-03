@@ -1,4 +1,3 @@
-// Footer.tsx
 'use client';
 
 import { useI18n } from '@/i18n/i18n-provider';
@@ -16,15 +15,15 @@ const contactInfo = {
   locations: [
     { 
       name: 'Naduvannur',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7819.838505266672!2d75.76825084563728!3d11.485749954837706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba663aea43f3473%3A0x6fa0e6f3eadb57c0!2sNaduvannur%2C%20Kerala%20673614!5e0!3m2!1sen!2sin!4v1743580532072!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"'
+      mapUrl: 'https://maps.app.goo.gl/BYZHabQxUYFXC7Kq7'
     },
     { 
       name: 'Narikkuni',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.5541602787666!2d75.85991982608152!3d11.367239938819761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba66785d674a927%3A0x9a81f2e9ec163c2d!2sNarikkuni%2C%20Kerala%20673585!5e0!3m2!1sen!2sin!4v1743580472650!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"'
+      mapUrl: 'https://maps.app.goo.gl/xD3xHCh1UmSB4djK6'
     },
     { 
       name: 'Poonoor',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7821.242870864435!2d75.89838264563495!3d11.434999105026538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba668a13022f997%3A0xacfe4f6358b83a41!2sPoonoor%2C%20Kerala%20673574!5e0!3m2!1sen!2sin!4v1743580628163!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"'
+      mapUrl: 'https://maps.app.goo.gl/YhCFU8WCFeAffRH8A'
     }],
   social: [
     { name: 'Instagram', icon: faInstagram, url: 'https://instagram.com/minhajul_janna_/' },
@@ -38,9 +37,9 @@ export function Footer() {
   const isRTL = locale === 'ar';
 
   return (
-    <footer className={cn("border-t border-border/50 pt-8", isRTL && "text-right")}>
+    <footer className={cn("border-t border-border/50 pt-8 pb-8", isRTL && "text-right")}>
       <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {contactInfo.locations.map((location, index) => (
             <div key={index} className="flex flex-col items-center">
               <h3 className="text-lg font-semibold mb-4">{location.name}</h3>
@@ -57,10 +56,10 @@ export function Footer() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <FontAwesomeIcon icon={Phone} className="h-5 w-5 text-primary" />
               </div>
@@ -80,7 +79,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <FontAwesomeIcon icon={Mail} className="h-5 w-5 text-primary" />
               </div>
@@ -94,21 +93,30 @@ export function Footer() {
               </div>
             </div>
 
-            {/* <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <FontAwesomeIcon icon={Pin} className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className="font-medium">
+                {/* <p className="font-medium">
                   {t('locations.title')}
-                </p>
+                </p> */}
                 <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
                   {contactInfo.locations.map((location, index) => (
-                    <li key={index}>{location.name}</li>
+                    <li key={index}>
+                      <a
+                        href={location.mapUrl}
+                        target="_blank"
+                        rel='noopener noreferrer'
+                        className="hover:text-primary"
+                      >
+                        {location.name}
+                      </a>
+                    </li>
                   ))}
                 </ul>
               </div>
-            </div> */}
+            </div> 
           </div>
 
           <div className="flex justify-center flex-wrap gap-4">
@@ -119,9 +127,8 @@ export function Footer() {
                 className="gap-2"
                 asChild
               >
-                <Link href={platform.url} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={platform.icon} className="h-4 w-4" />
-                  {platform.name}
+                <Link href={platform.url} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <FontAwesomeIcon icon={platform.icon} className="h-5 w-5 text-primary" />
                 </Link>
               </Button>
             ))}

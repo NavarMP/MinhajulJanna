@@ -57,13 +57,13 @@ export function Features() {
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                     <FontAwesomeIcon icon={Icon} className="h-5 w-5 text-primary" />
                   </div>
-                  <CardTitle className={cn(
+                  {/* <CardTitle className={cn(
                     "text-lg",
                     isRTL && "font-arabic",
                     isMalayalam && "font-malayalam"
                   )}>
-                    {index + 1}. {locale === 'ml' ? 'സവിശേഷത' : locale === 'en' ? 'Feature' : 'ميزة'}
-                  </CardTitle>
+                    {index + 1}. {feature}
+                  </CardTitle> */}
                 </CardHeader>
                 <CardContent>
                   <p className={cn(
@@ -71,7 +71,7 @@ export function Features() {
                     isRTL && "font-arabic",
                     isMalayalam && "font-malayalam"
                   )}>
-                    {feature}
+                   {index + 1}. {feature}
                   </p>
                 </CardContent>
               </Card>
