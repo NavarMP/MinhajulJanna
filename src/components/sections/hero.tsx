@@ -21,16 +21,19 @@ const locationImages = [
     id: 'Naduvannur',
     src: 'images/Naduvannur.jpg/',
     alt: 'Naduvannur',
+    mapUrl: 'https://maps.app.goo.gl/BYZHabQxUYFXC7Kq7'
   },
   {
     id: 'narikkuni',
     src: 'images/narikkuni.jpg/',
     alt: 'Narikkuni',
+    mapUrl: 'https://maps.app.goo.gl/xD3xHCh1UmSB4djK6'
   },
   {
     id: 'poonoor',
     src: 'images/poonoor.jpg/',
     alt: 'Poonoor',
+    mapUrl: 'https://maps.app.goo.gl/YhCFU8WCFeAffRH8A'
   },
 ];
 
@@ -104,26 +107,28 @@ export function Hero() {
               <CarouselContent>
                 {locationImages.map((img, index) => (
                   <CarouselItem key={img.id}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        priority={index === 0}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <div className="absolute bottom-0 p-4 text-white">
-                          <h3 className={cn(
-                            "text-lg font-medium",
-                            isMalayalam && "font-malayalam"
-                          )}>
-                            {img.alt}
-                          </h3>
+                    <Link href={img.mapUrl} target="_blank" rel="noopener noreferrer">
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl hover:opacity-80 transition-opacity">
+                        <Image
+                          src={img.src}
+                          alt={img.alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={index === 0}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                          <div className="absolute bottom-0 p-4 text-white">
+                            <h3 className={cn(
+                              "text-lg font-medium",
+                              isMalayalam && "font-malayalam"
+                            )}>
+                              {img.alt}
+                            </h3>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </CarouselItem>
                 ))}
               </CarouselContent>

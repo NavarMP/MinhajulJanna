@@ -149,13 +149,13 @@ export function AdmissionContent() {
               </span>
             </Link>
           </Button>
-          <Button size="lg" variant="outline" asChild>
+          {/* <Button size="lg" variant="outline" asChild>
             <Link href="/contact">
               <span className={cn(isMalayalam && "font-malayalam")}>
                 {isMalayalam ? 'ഞങ്ങളെ സന്ദർശിക്കുക' : locale === 'ar' ? 'قم بزيارتنا' : 'Visit Us'}
               </span>
             </Link>
-          </Button>
+          </Button> */}
         </div>
       </section>
     </>

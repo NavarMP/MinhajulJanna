@@ -5,7 +5,13 @@ import { useI18n } from '@/i18n/i18n-provider';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome as Home, faFileAlt as File, faVideo as Video, faBook as Book, faUserPlus as UserPlus} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faHome as Home, 
+  faFileAlt as File, 
+  faVideo as Video, 
+  faBook as Book, 
+  faUserPlus as UserPlus
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 const navItems = [
